@@ -1,4 +1,6 @@
 gym>=0.11.0,<0.14.0
-mujoco-py>2.0,<2.1
+cython<3
+lockfile
+mujoco_py==2.0.2.5
 numpy>=1.10.4
 transforms3d>=0.3.0<0.4
