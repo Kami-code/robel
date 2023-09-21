@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="dclaw_3x">
+  <link name="dclaw_down">
+    <visual>
+      <geometry>
+        <mesh filename="visual/triValve_down.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/triValve_down_collision.obj" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="dclaw_up">
+    <visual>
+      <geometry>
+        <mesh filename="visual/triValve_up.obj" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/triValve_up_collision.obj" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="valve_joint" type="continuous">
+    <parent link="dclaw_down"/>
+    <child link="dclaw_up"/>
+    <origin rpy="0 0 0" xyz="0 0 0.03"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+</robot>
